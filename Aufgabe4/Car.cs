@@ -6,14 +6,13 @@ namespace Aufgabe4
 {
     class Car : Vehicle
     {
-        private double fuelconsumption { get; set; }
+        private double fuelConsumption { get; set; }
         private double fuelCapacity { get; set; }
         private double fuelLevel { get; set; }
 
-        public Car(string brandCar, double consumptionCar, double fuelCapacityCar)
+        public Car(string brandCar, double consumptionCar, double fuelCapacityCar):base(brandCar)
         {
-            brandCar // ???????
-            this.fuelconsumption = consumptionCar;
+            this.fuelConsumption = consumptionCar;
             this.fuelLevel = fuelCapacityCar;
         }
 

@@ -6,23 +6,24 @@ namespace Aufgabe4
 {
     class Vehicle
     {
-        private int nrOfObjects { get; set; }
-        private string brand { get; set; }
+        private static int nrOfObjects { get; set; }
+        public string brand { get; private set; }
         private int coveredDistance { get; set; }
 
         public Vehicle(string brandVehicle)
         {
             this.brand = brandVehicle;
+            nrOfObjects += 1;
         }
 
-        public bool Drive()
+        public bool Drive(int distance)
         {
-            this.coveredDistance // ?????
+            this.coveredDistance += distance;
             return true;
         }
 
-        public int GetNrOfCreatedObjects()
-        {
+        public static int GetNrOfCreatedObjects()
+        {            
             return nrOfObjects;
         }
     }
